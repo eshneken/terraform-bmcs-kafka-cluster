@@ -1,8 +1,4 @@
-resource "baremetal_core_volume" "dummy_block_1" {
-  availability_domain = "${lookup(data.baremetal_identity_availability_domains.ADs.availability_domains[0],"name")}" 
-  compartment_id = "${var.compartment_ocid}"
-  display_name = "dummy_block_1"
-  size_in_mbs = "262144"
+resource "null_resource" "config_node_1" {
 
     provisioner "file" {
         connection {
@@ -70,12 +66,8 @@ resource "baremetal_core_volume" "dummy_block_1" {
     }
  }
  
-resource "baremetal_core_volume" "dummy_block_2" {
-  availability_domain = "${lookup(data.baremetal_identity_availability_domains.ADs.availability_domains[1],"name")}" 
-  compartment_id = "${var.compartment_ocid}"
-  display_name = "dummy_block_2"
-  size_in_mbs = "262144"
-    
+resource "null_resource" "config_node_2" {
+
     provisioner "file" {
         connection {
             host="${var.node-2-public-ip}"
@@ -142,11 +134,7 @@ resource "baremetal_core_volume" "dummy_block_2" {
     }
 }
 
-resource "baremetal_core_volume" "dummy_block_3" {
-  availability_domain = "${lookup(data.baremetal_identity_availability_domains.ADs.availability_domains[2],"name")}" 
-  compartment_id = "${var.compartment_ocid}"
-  display_name = "dummy_block_3"
-  size_in_mbs = "262144"
+resource "null_resource" "config_node_3" {
     
     provisioner "file" {
         connection {
