@@ -48,6 +48,8 @@ The root directory contains a **main.tf** file which is the root configuration a
  * **compute-instance**:  Builds an Oracle Linux 7 (OL7) compute instance.  Code is provided to build additional block storage and attach but I've commented it out since it is not necessary for the sample.  This module is referenced from main.tf three times to build the three node members each in a different availability domain in the region.
  * **kafka-config**:  This module takes the three vanilla compute instances and configures them for Kafka and Zookeerper.  It leverages a number of [file](https://www.terraform.io/docs/provisioners/file.html) and [remote-exec](https://www.terraform.io/docs/provisioners/remote-exec.html) calls.  Because Terraform provisioners cannot be applied to modules, I've taken the shortcut of binding them to dummy storage volumes that are created.  This is a bit of a hack but this scheme works by staging them after instance creation and allowing the three to configure in parallel. 
  
+ Each module has a *main.tf* file which describes the module configuration.  Datasources are defined in *datasources.tf*, input variables are defined in *vars.tf*, and output variables are defined in *outputs.tf*.  I've tried to use these naming conventions consistently throughout the project.
+ 
  The **userdata** directory, in addition to the SSH keyfiles that you must place there, also contains some bash scripts which are uploaded to each compute instance and run as part of the **kafka-provision** step.
  
  ## Running the Sample
