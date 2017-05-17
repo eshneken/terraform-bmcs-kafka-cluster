@@ -68,8 +68,8 @@ If you want to tear down your environment, you can do that by running **terrafor
 ## Testing the Sample
 Once your apply completes, you should see some output information that looks like this:
 
- kafka_cluster_address = 129.142.26.83:9092,129.126.3.130:9092;129.146.18.251:9092 
- kafka_start_command = ./startKafkaRemote.sh 129.146.13.93 129.142.3.110 129.143.28.251
+    kafka_cluster_address = 129.142.26.83:9092,129.126.3.130:9092;129.146.18.251:9092 
+    kafka_start_command = ./startKafkaRemote.sh 129.146.13.93 129.142.3.110 129.143.28.251
 
 You can start your Zookeeper/Kafka cluster by copying the *kafka_start_command* into your shell and executing.  This will issue remote SSH commands to each of the nodes in the cluster to execute their startup sequence.
 
