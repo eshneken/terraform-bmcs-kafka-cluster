@@ -1,6 +1,14 @@
 #!/bin/bash
 
+# stop linux firewall
 sudo service firewalld stop
+sudo systemctl disable firewalld
+
+# disable SELinux
+sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+sudo setenforce 0
+
+# get required packages via yum and download kafka from mirror
 sudo yum update -y
 sudo yum -y install java-1.8.0-openjdk
 sudo yum -y install wget
