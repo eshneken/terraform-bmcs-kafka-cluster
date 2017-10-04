@@ -4,7 +4,8 @@ variable "fingerprint" {}
 variable "private_key_path" {}
 variable "compartment_ocid" {default="ocid1.compartment.oc1..aaaaaaaavj6u2nnfwypi6v7vyk66ohmhkvauw5mrhr77zgutlo7rn2d5edgq"}
 
-provider "baremetal" {
+provider "oci" {
+  region = "us-phoenix-1"
   tenancy_ocid = "${var.tenancy_ocid}"
   user_ocid = "${var.user_ocid}"
   fingerprint = "${var.fingerprint}"

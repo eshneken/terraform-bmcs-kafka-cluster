@@ -16,9 +16,9 @@ It is helpful to understand Terraform before modifying this code for your own pu
 ## Software Requirements
 To run this you must have installed the [Terraform](https://www.terraform.io/downloads.html) binary (at least 0.9.x) and configured it per instruction.  
 
-You must also have installed the [Oracle Bare Metal Cloud Terraform provider](https://github.com/oracle/terraform-provider-baremetal/releases).
+You must also have installed the [Oracle Bare Metal Cloud Terraform provider](https://github.com/oracle/terraform-provider-oci/releases).
 
-You will also, of course, need access to an Oracle Bare Metal Cloud Service (BMCS) account.  If you do not have access, you can request a [free trial](https://cloud.oracle.com/en_US/tryit).  To learn more about Oracle BMCS, read the [Getting Started](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/baremetalintro.htm) guide.
+You will also, of course, need access to an Oracle Bare Metal Cloud Service (BMCS) account.  If you do not have access, you can request a [free trial](https://cloud.oracle.com/en_US/tryit).  To learn more about Oracle BMCS, read the [Getting Started](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/ociintro.htm) guide.
 
 If you're working on Windows, it is handy to have a proper shell environment to operate in.  For this, I use [Babun](http://babun.github.io/).
 
